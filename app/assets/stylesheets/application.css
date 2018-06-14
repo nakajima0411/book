@@ -13,3 +13,115 @@
  *= require_tree .
  *= require_self
  */
+
+ /* common */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000000;
+}
+a {
+  text-decoration: none;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+h1{
+	font-size: 26px;
+}
+p{
+	font-size: 13px
+}
+.text{
+    margin: 30px;
+}
+.box{
+	padding-left: 30px;
+}
+.botan{
+	padding: 8px 0;
+}
+
+.top{
+	padding: 25px 0 0 35px;
+}
+
+.index{
+	padding: 25px 0 0 35px;
+}
+.index-title{
+	font-size: 26px;
+}
+.table{
+	border-spacing: 10px 8px;
+}
+.tr{
+	font-size: 13px;
+}
+
+.new-title{
+	font-size: 20px;
+	padding: 10px 0;
+}
+.label-title{
+	font-size: 13px;
+}
+.book-title{
+}
+.label-body{
+	font-size: 13px;
+}
+.book-body{
+}
+
+
+#error_explanation{
+	width: 450px;
+	padding: 7px;
+	margin-bottom: 20px;
+	background-color: #f0f0f0;
+	border: 2px sorid #f00;
+}
+.error-text{
+	padding: 5px 5px 5px 15px;
+	font-size: 12px;
+	margin: -7px;
+	margin-bottom: 0;
+	background-color: #f00;
+	color: #fff;
+}
+ul{
+	margin: 30px;
+}
+li{
+	font-size: 12px;
+}
+
+
+#notice{
+	color: green;
+}
+
+a:link{
+	color: #00f;
+	text-decoration: underline;
+}
+a:visited{
+    color: #000;
+    text-decoration: underline;
+}
+a:hover{
+    color: #fff;
+    text-decoration: underline;
+    background-color: #000;
+}
+a:active{
+    color: #fff;
+    text-decoration: underline;
+    background-color: #000;
+}
