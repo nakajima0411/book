@@ -10,6 +10,56 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <header>
+      <div class="container">
+        <nav class="nav navbar-nav navbar-left">
+          <span class="Bookers">Bookers</span>
+        </nav>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+              <li class="">
+                <%= link_to ' Home', user_path(current_user.id), class: "glyphicon glyphicon-home" %>
+              </li>
+              <li class="">
+                 <%= link_to " Uses", users_path, class: "glyphicon glyphicon-user" %>
+              </li>
+              <li class="">
+                <%= link_to ' Books', books_path, class: "glyphicon glyphicon-book" %>
+              </li>
+              <li class="">
+                <%= link_to " logout", destroy_user_session_path, method: :delete, class: "glyphicon glyphicon-log-out" %>
+              </li>
+            <% else %>
+              <li class="">
+                <%= link_to "Home", top_path %>
+              </li>
+              <li class="">
+                <%= link_to "About", about_path %>
+              </li>
+              <li class="">
+                <%= link_to "sign up", new_user_registration_path %>
+              </li>
+              <li class="">
+                <%= link_to "login", new_user_session_path %>
+              </li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+        <%= yield %>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-3 footer">
+            <p>CopyRight Infratop.inc</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

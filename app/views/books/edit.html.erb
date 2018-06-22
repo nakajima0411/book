@@ -1,6 +1,8 @@
-<div class="box">
+<div class="container">
+  <div class="row">
+   <div class="col-md-6 col-md-offset-3">
 
-  <div class="text"><h1>Editing book</h1>
+    <h1>Editing book</h1>
 
     <%= form_for(@book) do |f| %>
 
@@ -15,17 +17,17 @@
               </div>
       <% end %>
 
-      <div class="field">
-        <%= f.label :title, class: "label_title" %><br>
-        <%= f.text_field :title, class: "book_title" %>
+      <div class="field row">
+        <%= f.label :title,  class: "label_title" %><br>
+        <%= f.text_field :title, class: "book_title col-xs-12" %>
       </div>
 
-      <div class="field">
-        <%= f.label :body, class: "label_body" %><br>
-        <%= f.text_area :body, class: "book_body" %>
+      <div class="field row">
+        <%= f.label :option, class: "label_body" %><br>
+        <%= f.text_area :body, class: "book_body col-xs-12" %>
       </div>
 
-       <p class="botan"><%= f.submit ' update Book ' %></p>
+       <p class="action row"><%= f.submit ' update Book ', class: "btn btn-color col-xs-12" %></p>
     <% end %>
 
 	  <p>
@@ -35,5 +37,6 @@
 	  <%= link_to "Back", books_path,
 	   class: "back" %>
 	  </p>
+   </div>
   </div>
 </div>

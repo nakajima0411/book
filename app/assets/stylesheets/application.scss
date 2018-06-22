@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  */
+  @import "bootstrap-sprockets";
+  @import "bootstrap";
 
  /* common */
 * {
@@ -22,7 +24,19 @@
   color: #000000;
 }
 a {
+  color: #808080;
   text-decoration: none;
+  font-size: 13px;
+}
+a:link{
+}
+a:visited{
+}
+a:hover{
+   color: #c0c0c0;
+   background-color: #000;
+}
+a:active{
 }
 
 .clearfix::after {
@@ -31,17 +45,41 @@ a {
   clear: both;
 }
 
-h1{
-	font-size: 26px;
+header{
+	background-color: #000;
 }
+.footer{
+	margin-left: 75%;
+	font-size: 13px;
+}
+.Bookers{
+	color: #fff;
+	font-size: 20px;
+}
+
+.field,.actions{
+	margin-bottom: 10px;
+}
+.btn-color{
+    color: #fff;
+	background-color: #00f;
+}
+.btn-color2{
+	background-color: #0f0;
+	padding: 5px 10px;
+	border-radius: 3px;
+}
+.btn-color3{
+	background-color: #f00;
+	padding: 5px 10px;
+	border-radius: 3px;
+}
+
 p{
 	font-size: 13px
 }
 .text{
     margin: 30px;
-}
-.box{
-	padding-left: 30px;
 }
 .botan{
 	padding: 8px 0;
@@ -51,12 +89,6 @@ p{
 	padding: 25px 0 0 35px;
 }
 
-.index{
-	padding: 25px 0 0 35px;
-}
-.index-title{
-	font-size: 26px;
-}
 .table{
 	border-spacing: 10px 8px;
 }
@@ -64,21 +96,12 @@ p{
 	font-size: 13px;
 }
 
-.new-title{
-	font-size: 20px;
-	padding: 10px 0;
-}
 .label_title{
 	font-size: 13px;
-}
-.book_title{
 }
 .label_body{
 	font-size: 13px;
 }
-.book_body{
-}
-
 
 #error_explanation{
 	width: 450px;
@@ -95,33 +118,7 @@ p{
 	background-color: #f00;
 	color: #fff;
 }
-ul{
-	margin: 30px;
-}
-li{
-	font-size: 12px;
-}
-
 
 #notice{
 	color: green;
-}
-
-a:link{
-	color: #00f;
-	text-decoration: underline;
-}
-a:visited{
-    color: #000;
-    text-decoration: underline;
-}
-a:hover{
-    color: #fff;
-    text-decoration: underline;
-    background-color: #000;
-}
-a:active{
-    color: #fff;
-    text-decoration: underline;
-    background-color: #000;
 }
