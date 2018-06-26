@@ -7,15 +7,15 @@ class BooksController < ApplicationController
 
   def index
   	  @books = Book.all
-  	  @book = Book.new
+  	  @bookn = Book.new
       @user = User.find(current_user.id)
   end
 
   def create
-  	  @book = Book.new(book_params)
-      @book.user_id = current_user.id
-  	  if @book.save
-  	   redirect_to book_path(@book),
+  	  @bookn = Book.new(book_params)
+      @bookn.user_id = current_user.id
+  	  if @bookn.save
+  	   redirect_to book_path(@bookn),
   	    notice: 'Book was successfully created.'
   	  else
   	  	@books = Book.all
@@ -26,11 +26,16 @@ class BooksController < ApplicationController
 
   def show
   	  @book = Book.find(params[:id])
+      @bookn = Book.new
       @user = User.find(current_user.id)
   end
 
   def edit
-  	  @book = Book.find(params[:id])
+      if @user == current_user
+       @book = Book.find(params[:id])
+      else
+       redirect_to user_path(current_user)
+      end
   end
 
   def update

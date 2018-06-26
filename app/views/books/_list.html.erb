@@ -16,19 +16,19 @@
          </tbody>
        </table>
        <div class="row">
-           <% if @user.id == current_user.id %>
+           <% if @user == current_user %>
            <p><%= link_to "", edit_user_path(@user), class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench" %></p>
            <% end %>
        </div>
 
        <h2>New book</h2>
 
-       <%= form_for @book do |f| %>
-         <% if @book.errors.any? %>
+       <%= form_for @bookn do |f| %>
+         <% if @bookn.errors.any? %>
            <div id="error_explanation" class="alert alert-danger">
-           <h2 class="error-text"><%= @book.errors.count %>errors prohibited this book from being saved:</h2>
+           <h2 class="error-text"><%= @bookn.errors.count %>errors prohibited this book from being saved:</h2>
            <ul>
-             <% @book.errors.full_messages.each do |message| %>
+             <% @bookn.errors.full_messages.each do |message| %>
                <li><%= message %></li>
              <% end %>
            </ul>
